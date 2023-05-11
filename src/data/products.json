@@ -4,61 +4,64 @@
       "id": 1,
       "name": "Swift Mouse",
       "price": 29.99,
+      "category": "accessories",
       "imgUrl": "/images/gaming_mouse.jpg"
     },
     {
       "id": 2,
       "name": "Blaze Keyboard",
       "price": 79.99,
+      "category": "accessories",
       "imgUrl": "/images/gaming_keyboard.jpg"
     },
     {
       "id": 3,
       "name": "Echo Headset",
       "price": 99.99,
+      "category": "accessories",
       "imgUrl": "/images/gaming_headset.jpg"
     },
     {
       "id": 4,
       "name": "Horizon Monitor",
       "price": 249.99,
+      "category": "hardware",
       "imgUrl": "/images/gaming_monitor.jpg"
     },
     {
       "id": 5,
-      "name": "Nova Chair",
-      "price": 199.99,
-      "imgUrl": "/images/gaming_chair.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Vortex Console",
-      "price": 399.99,
-      "imgUrl": "/images/gaming_console.jpg"
-    },
-    {
-      "id": 7,
       "name": "Luminous Laptop",
       "price": 1499.99,
+      "category": "hardware",
       "imgUrl": "/images/gaming_laptop.jpg"
     },
     {
-      "id": 8,
+      "id": 6,
       "name": "Hyperion Controller",
       "price": 49.99,
+      "category": "hardware",
       "imgUrl": "/images/gaming_controller.jpg"
     },
     {
-      "id": 9,
-      "name": "Titan Desk",
-      "price": 299.99,
-      "imgUrl": "/images/gaming_desk.jpg"
+      "id": 7,
+      "name": "Gaming T-Shirt",
+      "price": 19.99,
+      "imgUrl": "/images/gaming_tshirt.jpg",
+      "category": "merchs"
     },
     {
-      "id": 10,
-      "name": "Shadow Mouse Pad",
+      "id": 8,
+      "name": "Gaming Hoodie",
+      "price": 39.99,
+      "imgUrl": "/images/gaming_hoodie.jpg",
+      "category": "merchs"
+    },
+    {
+      "id": 9,
+      "name": "Gaming Poster",
       "price": 9.99,
-      "imgUrl": "/images/gaming_mouse_pad.jpg"
+      "imgUrl": "/images/gaming_poster.jpg",
+      "category": "merchs"
     }
   ]
 }
