@@ -1,4 +1,4 @@
-import { Button, Container, Nav, Navbar as NavbarBs } from 'react-bootstrap';
+import { Button, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useShoppingCart } from '../context/ShoppingCartContext';
@@ -9,7 +9,7 @@ export default function Navbar() {
     <NavbarBs
       sticky="top"
       variant="dark"
-      className="bg-dark text-white shadow-sm mb-3"
+      className="bg-dark text-white shadow-sm"
       style={{ position: 'relative' }}
       expand="lg"
     >

@@ -8,7 +8,7 @@ type ShoppingCartProps = {
   isOpen: boolean;
 };
 
-export function ShoppingCart({ isOpen }: ShoppingCartProps) {
+export default function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { cartItems, closeCart } = useShoppingCart();
   const products = productData['products'];
   return (

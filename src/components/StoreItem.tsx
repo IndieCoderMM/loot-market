@@ -9,7 +9,7 @@ type StoreItemProps = {
   imgUrl: string;
 };
 
-function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
+export default function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
   const {
     getItemQuantity,
     increaseQuantity,
@@ -60,5 +60,3 @@ function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
     </Card>
   );
 }
-
-export default StoreItem;
