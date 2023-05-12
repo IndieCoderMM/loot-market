@@ -4,21 +4,21 @@
       "id": 1,
       "name": "Swift Mouse",
       "price": 29.99,
-      "category": "accessories",
+      "category": "accessory",
       "imgUrl": "/images/gaming_mouse.jpg"
     },
     {
       "id": 2,
       "name": "Blaze Keyboard",
       "price": 79.99,
-      "category": "accessories",
+      "category": "accessory",
       "imgUrl": "/images/gaming_keyboard.jpg"
     },
     {
       "id": 3,
       "name": "Echo Headset",
       "price": 99.99,
-      "category": "accessories",
+      "category": "accessory",
       "imgUrl": "/images/gaming_headset.jpg"
     },
     {
@@ -47,21 +47,21 @@
       "name": "Gaming T-Shirt",
       "price": 19.99,
       "imgUrl": "/images/gaming_tshirt.jpg",
-      "category": "merchs"
+      "category": "merchandise"
     },
     {
       "id": 8,
       "name": "Gaming Hoodie",
       "price": 39.99,
       "imgUrl": "/images/gaming_hoodie.jpg",
-      "category": "merchs"
+      "category": "merchandise"
     },
     {
       "id": 9,
       "name": "Gaming Poster",
       "price": 9.99,
       "imgUrl": "/images/gaming_poster.jpg",
-      "category": "merchs"
+      "category": "merchandise"
     }
   ]
 }
