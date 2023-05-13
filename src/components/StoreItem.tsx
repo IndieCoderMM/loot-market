@@ -24,14 +24,14 @@ function StoreItem({ product, isAlternate }: StoreItemProps) {
             <Image src={imgUrl} alt={name} fluid />
           </Col>
           <Col md={6} className="d-flex align-items-center">
-            <Card.Body className="d-flex flex-column justify-content-center p-5 rounded bg-light">
+            <Card.Body className="d-flex flex-column justify-content-center p-5">
               <h2>{name}</h2>
               <p>{info}</p>
               <p className="text-muted fw-bold">{formatCurrency(price)}</p>
               <Button
                 variant="danger"
                 href={`/product/${id}`}
-                className="btn-lg"
+                className="btn-lg align-self-start"
               >
                 View Product
               </Button>

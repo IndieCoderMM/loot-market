@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Wix Madefor Display', sans-serif;
-  font-size: 18px;
+  font-size: 1.3rem;
 }
 
 h1,
@@ -13,6 +13,10 @@ h5,
 h6 {
   text-transform: uppercase;
   font-weight: 700;
+}
+
+p {
+  line-height: 1.8;
 }
 
 .hero-section {

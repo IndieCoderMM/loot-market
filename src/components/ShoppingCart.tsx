@@ -33,7 +33,9 @@ export default function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <TiShoppingCart style={{ fontSize: '3rem' }} />
             <h2 className="fs-5">Your Cart is Empty</h2>
             <p>Start exploring our amazing products and fill your cart!</p>
-            <Button variant="outline-dark">Browse Products</Button>
+            <Button variant="outline-dark" href="/store">
+              Browse Products
+            </Button>
           </div>
         ) : (
           <Stack gap={2} className="p-2">

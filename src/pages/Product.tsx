@@ -28,6 +28,7 @@ function Product() {
   ).filter((i) => i.id !== product.id);
   return (
     <Container>
+      <h1 className="text-center text-muted text-capitalize">Product Detail</h1>
       <section className="my-4">
         <Row className="justify-content-center">
           <Col md={6}>

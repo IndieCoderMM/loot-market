@@ -20,8 +20,10 @@ export default function Home() {
                 Your Gaming Experience
               </h1>
               <p>
-                Discover the ultimate collection of gaming accessories,
-                hardware, and merchandise.
+                Unleash your gaming potential with our handpicked assortment of
+                accessories, high-performance hardware, and captivating
+                merchandise that will empower you to reach new levels of gaming
+                mastery.
               </p>
               <Link to="/store" className="btn btn-lg btn-danger rounded-0">
                 Explore Now
@@ -55,7 +57,9 @@ export default function Home() {
                 ensuring that you get the best gaming gear available in the
                 market.
               </p>
-              <Button variant="danger">Explore Our Collection</Button>
+              <Button variant="danger" href="/store">
+                Explore Our Collection
+              </Button>
             </Col>
           </Row>
         </Container>

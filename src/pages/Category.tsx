@@ -11,7 +11,10 @@ function Category() {
     category || '',
   );
   return (
-    <Container className="p-3">
+    <Container>
+      <h1 className="text-center text-muted text-capitalize">
+        {category} Products
+      </h1>
       {products.map((product, index) => (
         <StoreItem
           key={product.id}

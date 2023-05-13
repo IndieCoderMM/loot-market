@@ -1,5 +1,6 @@
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import FeaturedLinksSection from '../components/FeaturedLinksSection';
+import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   return (
@@ -31,8 +32,36 @@ export default function Home() {
           </Row>
         </Container>
       </section>
+
       <section className="my-2">
-        <h2 className="text-center mb-5">Explore Our Products</h2>
+        <Container className="p-2">
+          <Row>
+            <Col md={6}>
+              <h3>Contact Information</h3>
+              <p>
+                We'd love to hear from you. Get in touch with us using the
+                contact information below or by filling out the form.
+              </p>
+              <p>
+                <strong>Address:</strong> 123 Street, Chauk, Magway, Myanmar
+              </p>
+              <p>
+                <strong>Phone:</strong> +96 923-456-7890
+              </p>
+              <p>
+                <strong>Email:</strong> gamezo@realwebsite.com
+              </p>
+            </Col>
+            <Col md={6}>
+              <h3>Contact Form</h3>
+              <ContactForm />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="my-2">
+        <h2 className="text-center my-5">Explore Our Products</h2>
         <FeaturedLinksSection />
       </section>
     </Container>
