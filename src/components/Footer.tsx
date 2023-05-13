@@ -10,24 +10,16 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-white py-3">
       <Container>
-        <Navbar variant="dark d-flex flex-column flex-md-row align-items-start">
-          <Navbar.Brand className="fw-bold">gamezo</Navbar.Brand>
-          <Nav className="ms-md-auto">
-            <Nav.Link
-              to="/store/accessory"
-              as={NavLink}
-              className="custom-link"
-            >
+        <Navbar variant="dark d-flex flex-column flex-md-row align-items-start align-items-md-center">
+          <Navbar.Brand className="fw-bold fs-2">gamezo</Navbar.Brand>
+          <Nav className="ms-md-auto d-flex flex-wrap">
+            <Nav.Link to="/store/accessory" as={NavLink} className="fs-6">
               Accessory
             </Nav.Link>
-            <Nav.Link to="/store/hardware" as={NavLink} className="custom-link">
+            <Nav.Link to="/store/hardware" as={NavLink} className="fs-6">
               Hardware
             </Nav.Link>
-            <Nav.Link
-              to="/store/merchandise"
-              as={NavLink}
-              className="custom-link"
-            >
+            <Nav.Link to="/store/merchandise" as={NavLink} className="fs-6">
               Merchandise
             </Nav.Link>
           </Nav>
@@ -42,7 +34,7 @@ export default function Footer() {
             </p>
           </Col>
           <Col md={6}>
-            <ul className="list-unstyled d-flex gap-3 justify-content-end h-100 align-items-end">
+            <ul className="list-unstyled d-flex gap-3 justify-content-center justify-content-md-end  h-100 align-items-end">
               <li>
                 <a href="https://www.facebook.com">
                   <AiFillFacebook className="link-icon" />

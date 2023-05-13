@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import NavLinkCard from '../components/NavLinkCard';
+import { TbArrowBigUpLinesFilled } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -10,14 +11,23 @@ export default function Home() {
         style={{ backgroundImage: 'url(/images/hero_background.jpg)' }}
       >
         <Container>
-          <h1>Level Up Your Gaming Experience</h1>
-          <p>
-            Discover the ultimate collection of gaming accessories, hardware,
-            and merchandise.
-          </p>
-          <Link to="/store" className="btn btn-danger">
-            Explore Now
-          </Link>
+          <Row>
+            <Col md={6}>
+              <h1 style={{ fontSize: '3rem' }}>
+                <span className="text-warning d-inline-flex align-items-center">
+                  Level Up <TbArrowBigUpLinesFilled />
+                </span>{' '}
+                Your Gaming Experience
+              </h1>
+              <p>
+                Discover the ultimate collection of gaming accessories,
+                hardware, and merchandise.
+              </p>
+              <Link to="/store" className="btn btn-lg btn-danger rounded-0">
+                Explore Now
+              </Link>
+            </Col>
+          </Row>
         </Container>
       </section>
 

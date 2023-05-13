@@ -10,7 +10,7 @@ type NavLinkCardProps = {
 
 export default function NavLinkCard({ title, path, imgUrl }: NavLinkCardProps) {
   return (
-    <Card>
+    <Card className="shadow border-0">
       <Card.Img
         variant="top"
         src={imgUrl}

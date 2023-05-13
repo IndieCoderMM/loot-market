@@ -15,24 +15,36 @@ export default function Navbar() {
     >
       <div className="d-flex align-items-center">
         <NavbarBs.Toggle aria-controls="navbar" />
-        <NavbarBs.Brand className="ms-2 fw-bold fs-4">Gamezo</NavbarBs.Brand>
+        <NavbarBs.Brand className="ms-2 fw-bold fs-3">gamezo</NavbarBs.Brand>
       </div>
 
       <NavbarBs.Collapse id="navbar">
         <Nav className="mx-auto text-center">
-          <Nav.Link to="/" as={NavLink}>
+          <Nav.Link to="/" as={NavLink} className="text-uppercase fs-6">
             Home
           </Nav.Link>
-          <Nav.Link to="/store/accessory" as={NavLink}>
+          <Nav.Link
+            to="/store/accessory"
+            as={NavLink}
+            className="text-uppercase fs-6"
+          >
             Accessory
           </Nav.Link>
-          <Nav.Link to="/store/hardware" as={NavLink}>
+          <Nav.Link
+            to="/store/hardware"
+            as={NavLink}
+            className="text-uppercase fs-6"
+          >
             Hardware
           </Nav.Link>
-          <Nav.Link to="/store/merchandise" as={NavLink}>
+          <Nav.Link
+            to="/store/merchandise"
+            as={NavLink}
+            className="text-uppercase fs-6"
+          >
             Merchandise
           </Nav.Link>
-          <Nav.Link to="/about" as={NavLink}>
+          <Nav.Link to="/about" as={NavLink} className="text-uppercase fs-6">
             About
           </Nav.Link>
         </Nav>

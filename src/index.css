@@ -1,20 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .hero-section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 70vh;
-}
-
-.custom-link {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  transition: all 0.2s ease;
-}
-
-.custom-link:hover,
-.custom-link:focus {
-  color: #ccc;
 }
 
 .link-icon {
@@ -25,5 +30,6 @@
 
 .link-icon:hover,
 .link-icon:focus {
+  color: var(--bs-danger);
   transform: scale(1.1);
 }
