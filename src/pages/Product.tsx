@@ -52,8 +52,8 @@ function Product() {
                   >
                     <FaMinus />
                   </Button>
-                  <div>
-                    <span>{quantity}</span> in cart
+                  <div className="px-3">
+                    <span className="fw-bold">{quantity}</span> in cart
                   </div>
                   <Button
                     onClick={() => increaseQuantity(id)}

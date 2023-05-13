@@ -1,7 +1,8 @@
-import { Badge, Button, Stack } from 'react-bootstrap';
+import { Button, Stack } from 'react-bootstrap';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 import productData from '../data/products.json';
 import { formatCurrency } from '../utilities/formatCurrency';
+import { BsCartX } from 'react-icons/bs';
 
 type CartItemProps = {
   id: number;
@@ -15,24 +16,28 @@ function CartItem({ id, quantity }: CartItemProps) {
 
   if (item == null) return null;
   return (
-    <Stack direction="horizontal" gap={2}>
+    <Stack direction="horizontal" gap={2} className="p-2 rounded shadow-sm">
       <img
         src={item.imgUrl}
-        style={{ width: '125px', height: '75px', objectFit: 'contain' }}
+        style={{ width: '70px', height: '70px', objectFit: 'contain' }}
+        className="rounded border p-1"
       />
       <div className="d-flex justify-content-between align-items-center w-100">
         <div className="d-flex flex-column">
-          <span>{item.name}</span>
+          <span className="fw-bold fs-6">{item.name}</span>
           <span style={{ fontSize: '.85rem' }} className="text-muted">
             {formatCurrency(item.price)}
           </span>
         </div>
-        <Badge>x {quantity}</Badge>
-        <span className="fw-bold">{formatCurrency(item.price * quantity)}</span>
-        <Button variant="outline-secondary" onClick={() => removeFromCart(id)}>
-          &times;
-        </Button>
+        <div className="text-muted fw-bold">&times;&nbsp;{quantity}</div>
       </div>
+      <Button
+        variant="outline-danger"
+        onClick={() => removeFromCart(id)}
+        className="btn-sm"
+      >
+        <BsCartX style={{ fontSize: '1.1rem' }} />
+      </Button>
     </Stack>
   );
 }
