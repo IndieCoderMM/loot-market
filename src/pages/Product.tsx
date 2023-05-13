@@ -4,7 +4,7 @@ import productData from '../data/products.json';
 import { filterProductsByCategory } from '../utilities/filterProductsByCategory';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import StoreItem from '../components/StoreItem';
+import FeatureItem from '../components/FeatureItem';
 import { formatCurrency } from '../utilities/formatCurrency';
 
 function Product() {
@@ -110,7 +110,7 @@ function Product() {
           <Row className="align-items-stretch">
             {similarProducts.map((item) => (
               <Col md={4} className="p-2">
-                <StoreItem {...item} />
+                <FeatureItem {...item} />
               </Col>
             ))}
           </Row>

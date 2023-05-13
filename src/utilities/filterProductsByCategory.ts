@@ -2,6 +2,7 @@ interface Product {
     id: number;
     name: string;
     price: number;
+    info: string;
     category: string;
     imgUrl: string;
 }

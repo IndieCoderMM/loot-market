@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import ShoppingCartProvider from './context/ShoppingCartContext';
 import Footer from './components/Footer';
 import Product from './pages/Product';
+import Category from './pages/Category';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/store/:category" element={<Store />} />
+            <Route path="/store" element={<Store />} />
+            <Route path="/store/:category" element={<Category />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/about" element={<About />} />
           </Routes>

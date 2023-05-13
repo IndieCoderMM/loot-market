@@ -13,14 +13,14 @@ export default function Footer() {
         <Navbar variant="dark d-flex flex-column flex-md-row align-items-start align-items-md-center">
           <Navbar.Brand className="fw-bold fs-2">gamezo</Navbar.Brand>
           <Nav className="ms-md-auto d-flex flex-wrap">
-            <Nav.Link to="/store/accessory" as={NavLink} className="fs-6">
-              Accessory
+            <Nav.Link to="/" as={NavLink} className="text-uppercase fs-6">
+              Home
             </Nav.Link>
-            <Nav.Link to="/store/hardware" as={NavLink} className="fs-6">
-              Hardware
+            <Nav.Link to="/store" as={NavLink} className="text-uppercase fs-6">
+              Store
             </Nav.Link>
-            <Nav.Link to="/store/merchandise" as={NavLink} className="fs-6">
-              Merchandise
+            <Nav.Link to="/about" as={NavLink} className="text-uppercase fs-6">
+              About
             </Nav.Link>
           </Nav>
         </Navbar>

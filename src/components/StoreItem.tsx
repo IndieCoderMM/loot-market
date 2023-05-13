@@ -1,34 +1,46 @@
-import { Card } from 'react-bootstrap';
+import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
 import { formatCurrency } from '../utilities/formatCurrency';
-import { Link } from 'react-router-dom';
 
-type StoreItemProps = {
+interface Product {
   id: number;
   name: string;
+  info: string;
   price: number;
   imgUrl: string;
+}
+
+type StoreItemProps = {
+  product: Product;
+  isAlternate: boolean;
 };
 
-export default function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
+function StoreItem({ product, isAlternate }: StoreItemProps) {
+  const { id, name, info, imgUrl, price } = product;
   return (
-    <Card className="shadow" style={{ border: 'none' }}>
-      <Card.Img
-        src={imgUrl}
-        variant="top"
-        height={250}
-        style={{ objectFit: 'contain', padding: '.5rem' }}
-      />
-      <Card.Body>
-        <Card.Title className="d-flex justify-content-between">
-          <span>{name}</span>
-          <span className="ms-2 text-muted">{formatCurrency(price)}</span>
-        </Card.Title>
-        <div className="d-flex justify-content-center pt-3">
-          <Link to={`/product/${id}`} className="btn btn-danger">
-            See Product
-          </Link>
-        </div>
-      </Card.Body>
-    </Card>
+    <Container className="p-1 p-md-5">
+      <Card className="p-2">
+        <Row>
+          <Col md={6} className={isAlternate ? 'order-md-2' : ''}>
+            <Image src={imgUrl} alt={name} fluid />
+          </Col>
+          <Col md={6} className="d-flex align-items-center">
+            <Card.Body className="d-flex flex-column justify-content-center p-5 rounded bg-light">
+              <h2>{name}</h2>
+              <p>{info}</p>
+              <p className="text-muted fw-bold">{formatCurrency(price)}</p>
+              <Button
+                variant="danger"
+                href={`/product/${id}`}
+                className="btn-lg"
+              >
+                View Product
+              </Button>
+            </Card.Body>
+          </Col>
+        </Row>
+      </Card>
+    </Container>
   );
 }
+
+export default StoreItem;

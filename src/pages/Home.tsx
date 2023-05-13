@@ -1,7 +1,7 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
-import NavLinkCard from '../components/NavLinkCard';
 import { TbArrowBigUpLinesFilled } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
+import FeaturedLinksSection from '../components/FeaturedLinksSection';
 
 export default function Home() {
   return (
@@ -31,32 +31,8 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-5">
-        <Container>
-          <Row>
-            <Col md={4} className="mb-4">
-              <NavLinkCard
-                title="Accessory"
-                path="/store/accessory"
-                imgUrl="/images/gaming_headset.jpg"
-              />
-            </Col>
-            <Col md={4} className="mb-4">
-              <NavLinkCard
-                title="Hardware"
-                path="/store/hardware"
-                imgUrl="/images/gaming_laptop.jpg"
-              />
-            </Col>
-            <Col md={4} className="mb-4">
-              <NavLinkCard
-                title="Merchandise"
-                path="/store/merchandise"
-                imgUrl="/images/gaming_hoodie.jpg"
-              />
-            </Col>
-          </Row>
-        </Container>
+      <section className="py-5 mt-2">
+        <FeaturedLinksSection />
       </section>
 
       <section className="py-5">

@@ -1,11 +1,17 @@
 import Container from 'react-bootstrap/Container';
 import productData from '../data/products.json';
 import StoreItem from '../components/StoreItem';
+import { filterProductsByCategory } from '../utilities/filterProductsByCategory';
+import { useParams } from 'react-router-dom';
 
-export default function Store() {
-  const products = productData['products'];
+function Category() {
+  const { category } = useParams();
+  const products = filterProductsByCategory(
+    productData['products'],
+    category || '',
+  );
   return (
-    <Container>
+    <Container className="p-3">
       {products.map((product, index) => (
         <StoreItem
           key={product.id}
@@ -16,3 +22,5 @@ export default function Store() {
     </Container>
   );
 }
+
+export default Category;
