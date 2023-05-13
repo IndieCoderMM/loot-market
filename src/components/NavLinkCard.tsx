@@ -19,7 +19,7 @@ export default function NavLinkCard({ title, path, imgUrl }: NavLinkCardProps) {
       />
       <Card.Body className="text-center bg-light">
         <Card.Title>{title}</Card.Title>
-        <Link to={path} className="btn btn-outline-warning">
+        <Link to={path} className="btn btn-outline-danger">
           Shop Now <TbArrowBigRightLinesFilled />
         </Link>
       </Card.Body>

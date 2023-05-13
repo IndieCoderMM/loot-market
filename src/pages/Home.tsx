@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import NavLinkCard from '../components/NavLinkCard';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -15,7 +15,9 @@ export default function Home() {
             Discover the ultimate collection of gaming accessories, hardware,
             and merchandise.
           </p>
-          <Button variant="warning">Explore Now</Button>
+          <Link to="/store" className="btn btn-danger">
+            Explore Now
+          </Link>
         </Container>
       </section>
 
@@ -67,13 +69,11 @@ export default function Home() {
                 ensuring that you get the best gaming gear available in the
                 market.
               </p>
-              <Button variant="primary">Explore Our Collection</Button>
+              <Button variant="danger">Explore Our Collection</Button>
             </Col>
           </Row>
         </Container>
       </section>
-
-      <Footer />
     </Container>
   );
 }

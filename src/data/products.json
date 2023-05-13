@@ -5,63 +5,120 @@
       "name": "Swift Mouse",
       "price": 29.99,
       "category": "accessory",
-      "imgUrl": "/images/gaming_mouse.jpg"
+      "imgUrl": "/images/gaming_mouse.jpg",
+      "info": "Experience precise and smooth control with the Swift Mouse. Ideal for gaming enthusiasts and professionals.",
+      "included": ["USB cable", "User manual"],
+      "feature": "The Swift Mouse features a high-precision sensor, ergonomic design, customizable buttons, and adjustable DPI settings for enhanced gaming performance."
     },
     {
       "id": 2,
       "name": "Blaze Keyboard",
       "price": 79.99,
       "category": "accessory",
-      "imgUrl": "/images/gaming_keyboard.jpg"
+      "imgUrl": "/images/gaming_keyboard.jpg",
+      "info": "Ignite your gaming experience with the Blaze Keyboard. Designed for maximum comfort and durability.",
+      "included": ["Keycap puller", "Wrist rest"],
+      "feature": "The Blaze Keyboard features mechanical switches, RGB backlighting, programmable macros, and anti-ghosting technology for optimal gaming performance."
     },
     {
       "id": 3,
       "name": "Echo Headset",
       "price": 99.99,
       "category": "accessory",
-      "imgUrl": "/images/gaming_headset.jpg"
+      "imgUrl": "/images/gaming_headset.jpg",
+      "info": "Immerse yourself in the game with the Echo Headset. Crystal-clear audio and lightweight design for extended gaming sessions.",
+      "included": ["Detachable microphone", "Audio splitter"],
+      "feature": "The Echo Headset delivers immersive 7.1 surround sound, adjustable headband, noise-canceling microphone, and soft ear cushions for exceptional comfort and audio clarity."
     },
     {
       "id": 4,
       "name": "Horizon Monitor",
       "price": 249.99,
       "category": "hardware",
-      "imgUrl": "/images/gaming_monitor.jpg"
+      "imgUrl": "/images/gaming_monitor.jpg",
+      "info": "Unlock the ultimate gaming visual experience with the Horizon Monitor. Stunning visuals and smooth gameplay.",
+      "included": ["Power cable", "HDMI cable"],
+      "feature": "The Horizon Monitor offers a curved display, ultra-fast response time, high refresh rate, and HDR technology for immersive gaming visuals and smooth performance."
     },
     {
       "id": 5,
       "name": "Luminous Laptop",
       "price": 1499.99,
       "category": "hardware",
-      "imgUrl": "/images/gaming_laptop.jpg"
+      "imgUrl": "/images/gaming_laptop.jpg",
+      "info": "Unleash your gaming potential with the Luminous Laptop. Power-packed performance and portable design.",
+      "included": ["Charging adapter", "Carrying case"],
+      "feature": "The Luminous Laptop features a high-performance processor, dedicated graphics card, fast storage, and a vibrant display for seamless gaming on-the-go."
     },
     {
       "id": 6,
       "name": "Hyperion Controller",
       "price": 49.99,
       "category": "hardware",
-      "imgUrl": "/images/gaming_controller.jpg"
+      "imgUrl": "/images/gaming_controller.jpg",
+      "info": "Elevate your gaming with the Hyperion Controller. Responsive controls and ergonomic design for precision gameplay.",
+      "included": ["USB charging cable", "Quick start guide"],
+      "feature": "The Hyperion Controller offers customizable buttons, wireless connectivity, vibration feedback, and a comfortable grip for immersive gaming experiences on various platforms."
     },
     {
       "id": 7,
       "name": "Gaming T-Shirt",
       "price": 19.99,
       "imgUrl": "/images/gaming_tshirt.jpg",
-      "category": "merchandise"
+      "category": "merchandise",
+      "info": "Show your love for gaming with our stylish Gaming T-Shirt. Comfortable and made with high-quality materials.",
+      "included": ["None"],
+      "feature": "The Gaming T-Shirt features a unique gaming-inspired design, soft fabric, and a relaxed fit for casual and comfortable wear during gaming sessions or everyday activities."
     },
     {
       "id": 8,
       "name": "Gaming Hoodie",
       "price": 39.99,
       "imgUrl": "/images/gaming_hoodie.jpg",
-      "category": "merchandise"
+      "category": "merchandise",
+      "info": "Stay warm and fashionable with our Gaming Hoodie. Perfect for gaming enthusiasts and those who love stylish gaming apparel.",
+      "included": ["None"],
+      "feature": "The Gaming Hoodie combines comfort and style with a cozy interior, drawstring hood, spacious pockets, and a gaming-themed design to keep you warm and stylish during gaming or outdoor activities."
     },
     {
       "id": 9,
       "name": "Gaming Poster",
       "price": 9.99,
       "imgUrl": "/images/gaming_poster.jpg",
-      "category": "merchandise"
+      "category": "merchandise",
+      "info": "Decorate your gaming space with our captivating Gaming Poster. A must-have for every gaming enthusiast.",
+      "included": ["None"],
+      "feature": "The Gaming Poster showcases stunning artwork and graphics that capture the essence of gaming. Hang it on your wall to enhance the gaming atmosphere and inspire your gaming adventures."
+    },
+    {
+      "id": 10,
+      "name": "Hyperion Mousepad",
+      "price": 14.99,
+      "category": "accessory",
+      "imgUrl": "/images/gaming_mousepad.jpg",
+      "info": "Enhance your gaming experience with the Hyperion Gaming Mousepad.",
+      "included": ["None"],
+      "feature": "Large surface area, smooth and precise tracking, and non-slip rubber base for optimal mouse control."
+    },
+    {
+      "id": 11,
+      "name": "HyperX SSD",
+      "price": 149.99,
+      "category": "hardware",
+      "imgUrl": "/images/gaming_ssd.jpg",
+      "info": "Boost your gaming performance with the HyperX Gaming SSD.",
+      "included": ["None"],
+      "feature": "High-speed storage, large capacity, and enhanced reliability for faster game loading times and smoother gameplay."
+    },
+    {
+      "id": 12,
+      "name": "Pixel Mug",
+      "price": 12.99,
+      "category": "merchandise",
+      "imgUrl": "/images/gaming_mug.jpg",
+      "info": "Enjoy your favorite beverage in style with the Pixel Gaming Mug.",
+      "included": ["None"],
+      "feature": "High-quality ceramic material, gaming-inspired pixel art design, and comfortable grip handle for a perfect gaming companion."
     }
   ]
 }
