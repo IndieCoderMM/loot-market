@@ -56,7 +56,7 @@ This is a gaming e-commerce website with a responsive design, interactive shoppi
 
 ## 🚀 Live Demo  <a name="live-demo"></a>
 
-You can visit the [live demo website here](gamezon.onrender.com).
+You can visit the [live demo website here](https://gamezon.onrender.com).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

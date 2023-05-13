@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-dark text-white py-3 mt-2">
       <Container>
         <Navbar variant="dark d-flex flex-column flex-md-row align-items-start align-items-md-center">
-          <Navbar.Brand className="fw-bold fs-2">gamezo</Navbar.Brand>
+          <Navbar.Brand className="fw-bold fs-2">gamezon</Navbar.Brand>
           <Nav className="ms-md-auto d-flex flex-wrap">
             <Nav.Link to="/" as={NavLink} className="text-uppercase fs-6">
               Home
@@ -27,7 +27,7 @@ export default function Footer() {
         <Row>
           <Col md={6}>
             <p>
-              Gamezo is your ultimate destination for gaming accessories,
+              Gamezon is your ultimate destination for gaming accessories,
               hardware, and merchandise. We strive to provide gamers with
               top-quality products at competitive prices. Explore our wide range
               of offerings and elevate your gaming experience today!
@@ -55,7 +55,7 @@ export default function Footer() {
         </Row>
         <hr className="my-4" />
         <p className="text-center">
-          &copy; {new Date().getFullYear()} gamezo. All rights reserved.
+          &copy; {new Date().getFullYear()} gamezon. All rights reserved.
         </p>
       </Container>
     </footer>

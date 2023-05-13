@@ -15,7 +15,7 @@ export default function Navbar() {
     >
       <div className="d-flex align-items-center">
         <NavbarBs.Toggle aria-controls="navbar" />
-        <NavbarBs.Brand className="ms-2 fw-bold fs-3">gamezo</NavbarBs.Brand>
+        <NavbarBs.Brand className="ms-2 fw-bold fs-3">gamezon</NavbarBs.Brand>
       </div>
 
       <NavbarBs.Collapse id="navbar">

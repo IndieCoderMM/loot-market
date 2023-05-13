@@ -49,7 +49,7 @@ export default function Home() {
                 <strong>Phone:</strong> +96 923-456-7890
               </p>
               <p>
-                <strong>Email:</strong> gamezo@realwebsite.com
+                <strong>Email:</strong> gamezon@realwebsite.com
               </p>
             </Col>
             <Col md={6}>
