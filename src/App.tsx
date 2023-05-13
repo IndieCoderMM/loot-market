@@ -7,23 +7,26 @@ import ShoppingCartProvider from './context/ShoppingCartContext';
 import Footer from './components/Footer';
 import Product from './pages/Product';
 import Category from './pages/Category';
+import { FormspreeProvider } from '@formspree/react';
 
 function App() {
   return (
     <>
-      <ShoppingCartProvider>
-        <Navbar />
-        <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/store/:category" element={<Category />} />
-            <Route path="/product/:id" element={<Product />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </div>
-        <Footer />
-      </ShoppingCartProvider>
+      <FormspreeProvider project="2206426162844924944">
+        <ShoppingCartProvider>
+          <Navbar />
+          <div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/store" element={<Store />} />
+              <Route path="/store/:category" element={<Category />} />
+              <Route path="/product/:id" element={<Product />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </div>
+          <Footer />
+        </ShoppingCartProvider>
+      </FormspreeProvider>
     </>
   );
 }
