@@ -1,7 +1,7 @@
 import { Button, Offcanvas, Stack } from 'react-bootstrap';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 import CartItem from './CartItem';
-import { formatCurrency } from '../utilities/formatCurrency';
+import { formatCurrency } from '../utils/formatCurrency';
 import { TiShoppingCart } from 'react-icons/ti';
 import productData from '../data/products.json';
 import Summary from './Summary';

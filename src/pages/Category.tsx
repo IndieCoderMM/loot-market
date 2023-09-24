@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import productData from '../data/products.json';
 import StoreItem from '../components/StoreItem';
-import { filterProductsByCategory } from '../utilities/filterProductsByCategory';
+import { filterProductsByCategory } from '../utils/filterProductsByCategory';
 import { useParams } from 'react-router-dom';
 
 function Category() {

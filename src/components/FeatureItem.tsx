@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap';
-import { formatCurrency } from '../utilities/formatCurrency';
+import { formatCurrency } from '../utils/formatCurrency';
 import { Link } from 'react-router-dom';
 
 type FeatureItemProps = {

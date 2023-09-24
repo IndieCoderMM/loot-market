@@ -2,10 +2,12 @@ import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import { TbArrowBigUpLinesFilled } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import FeaturedLinksSection from '../components/FeaturedLinksSection';
+import HeroBanner from '../components/HeroBanner';
 
 export default function Home() {
   return (
     <Container className="p-0" fluid>
+      <HeroBanner />
       <section
         className="bg-dark text-white hero-section d-flex flex-column justify-content-center"
         style={{ backgroundImage: 'url(/images/hero_background.jpg)' }}

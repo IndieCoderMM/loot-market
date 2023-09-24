@@ -5,19 +5,61 @@ body {
   font-size: 1.3rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
 p {
   line-height: 1.8;
 }
+
+.hero {
+  background-image: linear-gradient(90deg, #7e29ce 0%, #4218d5 100%);
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.hero__container {
+  position: relative;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__product-name {
+  font-weight: 700;
+  font-size: 5.5rem;
+  line-height: 0.9;
+}
+
+.hero__watermark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 9rem;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .hero__product-name {
+    font-size: 3.5rem;
+  }
+
+  .hero__watermark {
+    font-size: 2rem;
+    position: relative;
+  }
+}
+
+/* Old CSS ______________________________________________________________________________________ */
 
 .hero-section {
   background-repeat: no-repeat;

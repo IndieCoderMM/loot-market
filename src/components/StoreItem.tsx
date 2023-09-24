@@ -1,5 +1,5 @@
 import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
-import { formatCurrency } from '../utilities/formatCurrency';
+import { formatCurrency } from '../utils/formatCurrency';
 
 interface Product {
   id: number;

@@ -1,11 +1,11 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import productData from '../data/products.json';
-import { filterProductsByCategory } from '../utilities/filterProductsByCategory';
+import { filterProductsByCategory } from '../utils/filterProductsByCategory';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import FeatureItem from '../components/FeatureItem';
-import { formatCurrency } from '../utilities/formatCurrency';
+import { formatCurrency } from '../utils/formatCurrency';
 
 function Product() {
   const { id: productId } = useParams();
