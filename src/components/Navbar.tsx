@@ -2,6 +2,7 @@ import { Button, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useShoppingCart } from '../context/ShoppingCartContext';
+// TODO: Restyle the navbar
 
 export default function Navbar() {
   const { openCart, totalQuantity } = useShoppingCart();

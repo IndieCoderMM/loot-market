@@ -1,19 +1,9 @@
-import { useEffect, useState } from 'react';
-import { Banner, getBanners } from '../lib/sanity.query';
+import { Banner } from '../lib/sanity.query';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { urlFor } from '../lib/sanity.client';
 import { Link } from 'react-router-dom';
 
-const HeroBanner = () => {
-  const [banner, setBanner] = useState<Banner | null>(null);
-
-  useEffect(() => {
-    getBanners().then((res) => {
-      const data = res[0];
-      setBanner(data);
-    });
-  }, []);
-
+const HeroBanner = ({ banner }: { banner: Banner }) => {
   return (
     <div className="hero ">
       <Container className="hero__container py-5 text-white">

@@ -1,7 +1,7 @@
 import client from './sanity.client';
 
 export interface Banner {
-  _id: string;
+  id: string;
   image: string;
   buttonText: string;
   product: string;
@@ -14,7 +14,16 @@ export interface Banner {
   saleTime: string;
 }
 
-export const getProducts = async () => {
+export interface Product {
+  id: string;
+  name: string;
+  price: number;
+  slug: string;
+  description: string;
+  images: string[];
+}
+
+export const getProducts = async (): Promise<Product[]> => {
   return client.fetch(
     `*[_type == "product"]{
       "id": _id,
@@ -30,7 +39,7 @@ export const getProducts = async () => {
 export const getBanners = async (): Promise<Banner[]> => {
   return client.fetch(
     `*[_type == "banner"] {
-      _id,
+      "id": _id,
       image,
       buttonText,
       product,

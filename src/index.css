@@ -9,6 +9,17 @@ p {
   line-height: 1.8;
 }
 
+/* Utilities ------------------------------------------------------------------ */
+
+.section-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Components ----------------------------------------------------------------- */
+
+/* Hero Section */
 .hero {
   background-image: linear-gradient(90deg, #7e29ce 0%, #4218d5 100%);
   min-height: 100vh;
@@ -31,8 +42,8 @@ p {
 
 .hero__product-name {
   font-weight: 700;
-  font-size: 5.5rem;
-  line-height: 0.9;
+  font-size: 5rem;
+  line-height: 1;
 }
 
 .hero__watermark {
@@ -48,6 +59,97 @@ p {
   z-index: 0;
 }
 
+/* Product Section */
+.product-card {
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+  color: #324d67;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.product-card__image {
+  border-radius: 15px;
+  background-color: #ebebeb;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.product-card__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+.product-card__name {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.product-card__price {
+  font-weight: 800;
+  margin-top: 6px;
+  color: black;
+}
+
+/* Footer Banner */
+.footer-banner {
+  padding: 100px 40px;
+  background-color: #f02d34;
+  border-radius: 15px;
+  position: relative;
+  line-height: 1;
+  color: white;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.footer-banner__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-banner__description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.footer-banner__link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-banner__left h3 {
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 0.8;
+}
+
+.footer-banner__image {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+}
+
+.footer-banner__image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Media Queries -------------------------------------------------------------- */
+
 @media (max-width: 768px) {
   .hero__product-name {
     font-size: 3.5rem;
@@ -57,25 +159,4 @@ p {
     font-size: 2rem;
     position: relative;
   }
-}
-
-/* Old CSS ______________________________________________________________________________________ */
-
-.hero-section {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 90vh;
-}
-
-.link-icon {
-  font-size: 2rem;
-  color: #fff;
-  transition: all 0.2s ease;
-}
-
-.link-icon:hover,
-.link-icon:focus {
-  color: var(--bs-danger);
-  transform: scale(1.1);
 }
