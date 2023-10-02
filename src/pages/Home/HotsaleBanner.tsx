@@ -1,7 +1,11 @@
+import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Badge from 'react-bootstrap/Badge';
+
 import { Banner } from '../../lib/sanity.query';
 import { urlFor } from '../../lib/sanity.client';
-import { Link } from 'react-router-dom';
-import { Badge, Col, Container, Row } from 'react-bootstrap';
 
 const HotsaleBanner = ({ banner }: { banner: Banner }) => {
   const {

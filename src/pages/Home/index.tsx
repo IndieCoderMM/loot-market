@@ -1,5 +1,5 @@
-import HeroBanner from './HeroBanner';
 import { useEffect, useState } from 'react';
+import HeroBanner from './HeroBanner';
 import {
   Banner,
   Product,
@@ -9,6 +9,7 @@ import {
 import ProductCard from '../../components/ProductCard';
 import HotsaleBanner from './HotsaleBanner';
 import Services from './Services';
+import Testimonials from './Testimonials';
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -57,6 +58,8 @@ export default function Home() {
             ))}
         </div>
       </section>
+
+      <Testimonials />
     </main>
   );
 }

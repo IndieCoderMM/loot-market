@@ -15,7 +15,9 @@ const ProductCard = ({
         to={`/store/${product.slug}`}
         className="product-card__link"
         aria-label={product.name}
-      />
+      >
+        View Product
+      </Link>
       <img
         className="product-card__image"
         src={urlFor(product.images[imageIndex]).url()}
@@ -23,8 +25,10 @@ const ProductCard = ({
         width={300}
         height={300}
       />
-      <h3 className="product-card__name">{product.name}</h3>
-      <p className="product-card__price">${product.price}</p>
+      <p className="product-card__name">{product.name}</p>
+      <p className="product-card__price">
+        <span>${product.price + 10}</span>${product.price}
+      </p>
     </div>
   );
 };
