@@ -1,6 +1,6 @@
-import { Banner } from '../lib/sanity.query';
+import { Banner } from '../../lib/sanity.query';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import { urlFor } from '../lib/sanity.client';
+import { urlFor } from '../../lib/sanity.client';
 import { Link } from 'react-router-dom';
 
 const HeroBanner = ({ banner }: { banner: Banner }) => {

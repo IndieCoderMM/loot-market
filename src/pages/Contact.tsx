@@ -2,7 +2,7 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 import FeaturedLinksSection from '../components/FeaturedLinksSection';
 import ContactForm from '../components/ContactForm';
 
-export default function Home() {
+export default function Contact() {
   return (
     <Container>
       <section>

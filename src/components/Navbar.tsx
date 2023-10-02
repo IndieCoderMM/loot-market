@@ -1,6 +1,6 @@
 import { Button, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaUserAlt } from 'react-icons/fa';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 // TODO: Restyle the navbar
 
@@ -9,9 +9,8 @@ export default function Navbar() {
   return (
     <NavbarBs
       sticky="top"
-      variant="dark"
-      className="bg-dark text-white shadow-sm"
-      style={{ position: 'relative' }}
+      variant="light"
+      className="px-1 px-sm-3 bg-white"
       expand="lg"
     >
       <div className="d-flex align-items-center">
@@ -20,33 +19,19 @@ export default function Navbar() {
       </div>
 
       <NavbarBs.Collapse id="navbar">
-        <Nav className="mx-auto text-center">
-          <Nav.Link to="/" as={NavLink} className="text-uppercase fs-6">
+        <Nav className="ms-auto text-center fs-6">
+          <Nav.Link to="/" as={NavLink}>
             Home
           </Nav.Link>
-          <Nav.Link
-            to="/store/accessory"
-            as={NavLink}
-            className="text-uppercase fs-6"
-          >
-            Accessory
+          <Nav.Link to="/store" as={NavLink}>
+            Store
           </Nav.Link>
-          <Nav.Link
-            to="/store/hardware"
-            as={NavLink}
-            className="text-uppercase fs-6"
-          >
-            Hardware
+          <Nav.Link to="/contact" as={NavLink}>
+            Contact
           </Nav.Link>
-          <Nav.Link
-            to="/store/merchandise"
-            as={NavLink}
-            className="text-uppercase fs-6"
-          >
-            Merchandise
-          </Nav.Link>
-          <Nav.Link to="/about" as={NavLink} className="text-uppercase fs-6">
-            About
+          <Nav.Link to="/account" as={NavLink}>
+            <FaUserAlt className="me-2" />
+            Login / Register
           </Nav.Link>
         </Nav>
       </NavbarBs.Collapse>
@@ -55,12 +40,11 @@ export default function Navbar() {
         style={{
           width: '3rem',
           height: '3rem',
-          position: 'absolute',
-          right: '0.5rem',
-          top: '0.5rem',
+          top: '.5rem',
+          right: '.5rem',
         }}
-        className="d-flex align-items-center rounded-circle"
-        variant="outline-light"
+        className="d-flex align-items-center justify-content-center rounded-circle position-absolute position-sm-static"
+        variant="outline-dark"
         onClick={openCart}
       >
         <FaShoppingCart style={{ fontSize: '2rem' }} />

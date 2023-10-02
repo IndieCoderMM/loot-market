@@ -8,25 +8,25 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white py-3 mt-2">
+    <footer className="bg-black text-light py-3 fs-5">
       <Container>
         <Navbar variant="dark d-flex flex-column flex-md-row align-items-start align-items-md-center">
           <Navbar.Brand className="fw-bold fs-2">gamezon</Navbar.Brand>
           <Nav className="ms-md-auto d-flex flex-wrap">
-            <Nav.Link to="/" as={NavLink} className="text-uppercase fs-6">
+            <Nav.Link to="/" as={NavLink} className="text-uppercase ">
               Home
             </Nav.Link>
-            <Nav.Link to="/store" as={NavLink} className="text-uppercase fs-6">
+            <Nav.Link to="/store" as={NavLink} className="text-uppercase ">
               Store
             </Nav.Link>
-            <Nav.Link to="/about" as={NavLink} className="text-uppercase fs-6">
+            <Nav.Link to="/about" as={NavLink} className="text-uppercase ">
               About
             </Nav.Link>
           </Nav>
         </Navbar>
         <Row>
           <Col md={6}>
-            <p>
+            <p className="">
               Gamezon is your ultimate destination for gaming accessories,
               hardware, and merchandise. We strive to provide gamers with
               top-quality products at competitive prices. Explore our wide range
