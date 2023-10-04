@@ -31,7 +31,7 @@ const data = [
 const Testimonial = ({ name, role, text, imageUrl }: TestimonialProps) => {
   return (
     <div className="bg-black text-white rounded-3 d-flex flex-column align-items-center gap-2 py-5 px-3 text-center">
-      <p className="fs-6">{text}</p>
+      <p className="fs-6 mb-3">{text}</p>
       <img
         src={imageUrl}
         alt={name}
@@ -54,14 +54,7 @@ const Testimonial = ({ name, role, text, imageUrl }: TestimonialProps) => {
 
 const Testimonials = () => {
   return (
-    <div
-      className="px-1 py-5"
-      style={{
-        width: '100%',
-        maxWidth: '1200px',
-        margin: '0 auto',
-      }}
-    >
+    <div className="px-1 py-5 max-width-container">
       <div
         className="mb-5 fs-5 fs-sm-4"
         style={{

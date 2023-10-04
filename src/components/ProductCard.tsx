@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { urlFor } from '../lib/sanity.client';
 import { Product } from '../lib/sanity.query';
+import Image from 'react-bootstrap/Image';
 
 const ProductCard = ({
   product,
@@ -18,7 +19,7 @@ const ProductCard = ({
       >
         View Product
       </Link>
-      <img
+      <Image
         className="product-card__image"
         src={urlFor(product.images[imageIndex]).url()}
         alt={product.name}

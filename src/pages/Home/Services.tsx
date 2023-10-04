@@ -34,7 +34,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="d-flex flex-column flex-lg-row px-md-5 justify-content-center align-items-center gap-3 my-5">
+    <section className="max-width-container d-flex flex-column flex-lg-row px-md-5 justify-content-center align-items-center gap-3 my-5">
       {services.map((service) => (
         <article
           key={service.id}

@@ -1,5 +1,4 @@
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import FeaturedLinksSection from '../components/FeaturedLinksSection';
 import ContactForm from '../components/ContactForm';
 
 export default function Contact() {
@@ -58,11 +57,6 @@ export default function Contact() {
             </Col>
           </Row>
         </Container>
-      </section>
-
-      <section className="my-2">
-        <h2 className="text-center my-5">Explore Our Products</h2>
-        <FeaturedLinksSection />
       </section>
     </Container>
   );

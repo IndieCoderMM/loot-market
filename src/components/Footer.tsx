@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-light py-3 fs-5">
+    <footer className="bg-black text-light py-3 fs-5 py-sm-5">
       <Container>
         <Navbar variant="dark d-flex flex-column flex-md-row align-items-start align-items-md-center">
           <Navbar.Brand className="fw-bold fs-2">gamezon</Navbar.Brand>

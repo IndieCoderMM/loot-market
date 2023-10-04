@@ -1,19 +1,32 @@
 import Container from 'react-bootstrap/Container';
-import productData from '../data/products.json';
-import StoreItem from '../components/StoreItem';
+import { useDataContext } from '../context/DataContext';
+import ProductCard from '../components/ProductCard';
+import React from 'react';
+import { Col, Row } from 'react-bootstrap';
 
 export default function Store() {
-  const products = productData['products'];
+  const { products } = useDataContext();
   return (
     <Container>
-      <h1 className="text-center text-muted text-capitalize">All Products</h1>
-      {products.map((product, index) => (
-        <StoreItem
-          key={product.id}
-          product={product}
-          isAlternate={index % 2 !== 0}
-        />
-      ))}
+      <h1 className="text-center fw-bolder text-capitalize">All Products</h1>
+      <Row className="my-5">
+        {products?.map((product) => (
+          <React.Fragment key={product.id}>
+            <Col md={6} lg={4} xl={3} className="mb-4">
+              <ProductCard key={product.id} product={product} imageIndex={0} />
+            </Col>
+            <Col md={6} lg={4} xl={3} className="mb-4">
+              <ProductCard key={product.id} product={product} imageIndex={1} />
+            </Col>
+            <Col md={6} lg={4} xl={3} className="mb-4">
+              <ProductCard key={product.id} product={product} imageIndex={2} />
+            </Col>
+            <Col md={6} lg={4} xl={3} className="mb-4">
+              <ProductCard key={product.id} product={product} imageIndex={3} />
+            </Col>
+          </React.Fragment>
+        ))}
+      </Row>
     </Container>
   );
 }

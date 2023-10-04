@@ -7,7 +7,7 @@ import Rating from './Rating';
 import { useShoppingCart } from '../../context/ShoppingCartContext';
 import { useDataContext } from '../../context/DataContext';
 import ProductCard from '../../components/ProductCard';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -23,6 +23,10 @@ const ProductDetail = () => {
 
   const product = products.find((p) => p.slug === slug);
   const quantity = getItemQuantity(product?.id || '');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   return (
     <>

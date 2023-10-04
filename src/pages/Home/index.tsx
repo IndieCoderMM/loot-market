@@ -4,9 +4,14 @@ import HotsaleBanner from './HotsaleBanner';
 import Services from './Services';
 import Testimonials from './Testimonials';
 import { useDataContext } from '../../context/DataContext';
+import { useEffect } from 'react';
 
 export default function Home() {
   const { banners, products } = useDataContext();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
