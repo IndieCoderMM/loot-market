@@ -6,7 +6,8 @@
   --red: #f02d34;
 }
 
-* {
+*,
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -27,6 +28,10 @@ h6 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -39,7 +44,13 @@ h6 {
   background: #888;
 }
 
-/* Utilities ------------------------------------------------------------------ */
+/* Common ------------------------------------------------------------------ */
+.max-container {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .section-heading {
   font-size: 3rem;
@@ -108,6 +119,7 @@ h6 {
 .product-card {
   cursor: pointer;
   transform: scale(1, 1);
+  min-width: 250px;
   transition: transform 0.5s ease;
   color: #324d67;
   position: relative;
@@ -190,7 +202,7 @@ h6 {
   line-height: 1.5;
 }
 
-/* Footer Banner */
+/* Hotsale Banner */
 .hotsale-banner {
   padding: 5rem 0;
   background-color: var(--red);
@@ -239,6 +251,49 @@ h6 {
   object-fit: contain;
 }
 
+/* Product Detail Image */
+.product-detail-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Product carousel */
+.products-carousel {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.products-carousel__container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.products-carousel__track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 30s linear infinite;
+  animation-delay: 3s;
+}
+.products-carousel__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* Media Queries -------------------------------------------------------------- */
 
 @media (max-width: 768px) {
@@ -265,7 +320,12 @@ h6 {
 }
 
 @media (min-width: 576px) {
-  .position-sm-static {
-    position: static !important;
+  .nav-mr-lg {
+    margin-right: 3rem;
+  }
+
+  .product-detail-image {
+    width: 500px;
+    height: 500px;
   }
 }

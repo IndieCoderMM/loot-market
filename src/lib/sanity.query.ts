@@ -53,3 +53,17 @@ export const getBanners = async (): Promise<Banner[]> => {
     }`,
   );
 };
+
+export const getProductBySlug = async (slug: string): Promise<Product> => {
+  return client.fetch(
+    `*[_type == "product" && slug.current == $slug]{
+      "id": _id,
+      name,
+      price,
+      "slug": slug.current,
+      description,
+      "images": image[]
+    }[0]`,
+    { slug },
+  );
+};

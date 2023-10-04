@@ -12,7 +12,7 @@ const ProductCard = ({
   return (
     <div className="product-card">
       <Link
-        to={`/store/${product.slug}`}
+        to={`/product/${product.slug}`}
         className="product-card__link"
         aria-label={product.name}
       >
@@ -27,7 +27,7 @@ const ProductCard = ({
       />
       <p className="product-card__name">{product.name}</p>
       <p className="product-card__price">
-        <span>${product.price + 10}</span>${product.price}
+        <span>${(product.price * 1.5).toFixed(2)}</span>${product.price}
       </p>
     </div>
   );

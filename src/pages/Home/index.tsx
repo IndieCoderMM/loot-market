@@ -1,29 +1,13 @@
-import { useEffect, useState } from 'react';
 import HeroBanner from './HeroBanner';
-import {
-  Banner,
-  Product,
-  getBanners,
-  getProducts,
-} from '../../lib/sanity.query';
 import ProductCard from '../../components/ProductCard';
 import HotsaleBanner from './HotsaleBanner';
 import Services from './Services';
 import Testimonials from './Testimonials';
+import { useDataContext } from '../../context/DataContext';
 
 export default function Home() {
-  const [products, setProducts] = useState<Product[]>([]);
+  const { banners, products } = useDataContext();
 
-  const [banners, setBanners] = useState<Banner[]>([]);
-
-  useEffect(() => {
-    getProducts().then((res) => {
-      setProducts(res);
-    });
-    getBanners().then((res) => {
-      setBanners(res);
-    });
-  }, []);
   return (
     <>
       <HeroBanner banner={banners[1]} />

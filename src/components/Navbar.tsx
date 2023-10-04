@@ -2,7 +2,6 @@ import { Button, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { FaShoppingCart, FaUserAlt } from 'react-icons/fa';
 import { useShoppingCart } from '../context/ShoppingCartContext';
-// TODO: Restyle the navbar
 
 export default function Navbar() {
   const { openCart, totalQuantity } = useShoppingCart();
@@ -19,7 +18,7 @@ export default function Navbar() {
       </div>
 
       <NavbarBs.Collapse id="navbar">
-        <Nav className="ms-auto text-center fs-6">
+        <Nav className="ms-auto text-center fs-6 nav-mr-lg">
           <Nav.Link to="/" as={NavLink}>
             Home
           </Nav.Link>
@@ -29,7 +28,7 @@ export default function Navbar() {
           <Nav.Link to="/contact" as={NavLink}>
             Contact
           </Nav.Link>
-          <Nav.Link to="/account" as={NavLink}>
+          <Nav.Link to="/account" as={NavLink} className="ms-sm-3">
             <FaUserAlt className="me-2" />
             Login / Register
           </Nav.Link>
@@ -43,7 +42,7 @@ export default function Navbar() {
           top: '.5rem',
           right: '.5rem',
         }}
-        className="d-flex align-items-center justify-content-center rounded-circle position-absolute position-sm-static"
+        className="d-flex align-items-center justify-content-center rounded-circle position-absolute"
         variant="outline-dark"
         onClick={openCart}
       >
@@ -52,8 +51,8 @@ export default function Navbar() {
           <div
             className="rounded-circle bg-danger text-white d-flex justify-content-center align-items-center"
             style={{
-              width: '1.4rem',
-              height: '1.4rem',
+              width: '1rem',
+              height: '1rem',
               position: 'absolute',
               top: 0,
               right: 0,

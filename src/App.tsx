@@ -7,11 +7,12 @@ import {
 import Home from './pages/Home';
 import Store from './pages/Store';
 import Contact from './pages/Contact';
-import Product from './pages/Product';
+import ProductDetail from './pages/ProductDetail';
 import Category from './pages/Category';
 import Layout from './Layout';
 import { FormspreeProvider } from '@formspree/react';
 import ShoppingCartProvider from './context/ShoppingCartContext';
+import DataProvider from './context/DataContext';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +20,7 @@ const Router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="store" element={<Store />} />
       <Route path="store/:category" element={<Category />} />
-      <Route path="product/:id" element={<Product />} />
+      <Route path="product/:slug" element={<ProductDetail />} />
       <Route path="contact" element={<Contact />} />
       <Route path="*" element={<div>Not found</div>} />
     </Route>,
@@ -30,7 +31,9 @@ const App = () => {
   return (
     <FormspreeProvider project="2206426162844924944">
       <ShoppingCartProvider>
-        <RouterProvider router={Router} />
+        <DataProvider>
+          <RouterProvider router={Router} />
+        </DataProvider>
       </ShoppingCartProvider>
     </FormspreeProvider>
   );
