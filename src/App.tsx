@@ -30,11 +30,11 @@ const Router = createBrowserRouter(
 const App = () => {
   return (
     <FormspreeProvider project="2206426162844924944">
-      <ShoppingCartProvider>
-        <DataProvider>
+      <DataProvider>
+        <ShoppingCartProvider>
           <RouterProvider router={Router} />
-        </DataProvider>
-      </ShoppingCartProvider>
+        </ShoppingCartProvider>
+      </DataProvider>
     </FormspreeProvider>
   );
 };

@@ -14,15 +14,18 @@ const HeroBanner = ({ banner }: { banner: Banner }) => {
         <h2 className="hero__watermark">{banner?.smallText}</h2>
         <Row>
           <Col lg={6} className="">
-            <div className="">
-              <Image
-                src={banner?.image ? urlFor(banner.image).url() : ''}
-                alt={banner?.product}
-                width={500}
-                height={500}
-                className="hero__image w-100 h-auto object-fit-contain"
-              />
-            </div>
+            {banner?.image ? (
+              <div className="">
+                <Image
+                  src={banner?.image ? urlFor(banner.image).url() : ''}
+                  alt={banner?.product}
+                  width={500}
+                  height={500}
+                  fluid
+                  className="hero__image w-100 h-auto object-fit-contain"
+                />
+              </div>
+            ) : null}
             <h4 className="">{banner?.largeText2}</h4>
             <p className="fs-5 d-none d-sm-inline">{banner?.desc}</p>
           </Col>

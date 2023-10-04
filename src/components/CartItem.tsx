@@ -1,25 +1,29 @@
 import { Button, Stack } from 'react-bootstrap';
 import { useShoppingCart } from '../context/ShoppingCartContext';
-import productData from '../data/products.json';
 import { formatCurrency } from '../utils/formatCurrency';
 import { BsCartX } from 'react-icons/bs';
+import { useDataContext } from '../context/DataContext';
+import { urlFor } from '../lib/sanity.client';
 
 type CartItemProps = {
-  id: number;
+  id: string;
   quantity: number;
 };
 
 function CartItem({ id, quantity }: CartItemProps) {
   const { removeFromCart } = useShoppingCart();
-  const products = productData['products'];
-  const item = products.find((i) => i.id === id);
+  const { products } = useDataContext();
 
-  if (item == null) return null;
+  const item = products?.find((i) => i.id === id);
+
+  if (!item) return null;
   return (
     <Stack direction="horizontal" gap={2} className="p-2 rounded shadow-sm">
       <img
-        src={item.imgUrl}
-        style={{ width: '70px', height: '70px', objectFit: 'contain' }}
+        src={urlFor(item.images[0]).url()}
+        alt={item.name}
+        width={100}
+        height={100}
         className="rounded border p-1"
       />
       <div className="d-flex justify-content-between align-items-center w-100">

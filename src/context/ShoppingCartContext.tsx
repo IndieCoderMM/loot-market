@@ -1,21 +1,22 @@
 import { createContext, ReactNode, useContext, useState } from 'react';
 import ShoppingCart from '../components/ShoppingCart';
 import { useLocalStorage } from '../hooks/useLocalStorage';
+import toast from 'react-hot-toast';
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
 };
 
 type CartItem = {
-  id: number;
+  id: string;
   quantity: number;
 };
 
 type ShoppingCartContext = {
-  getItemQuantity: (id: number) => number;
-  increaseQuantity: (id: number) => void;
-  decreaseQuantity: (id: number) => void;
-  removeFromCart: (id: number) => void;
+  getItemQuantity: (id: string) => number;
+  increaseQuantity: (id: string) => void;
+  decreaseQuantity: (id: string) => void;
+  removeFromCart: (id: string) => void;
   openCart: () => void;
   closeCart: () => void;
   totalQuantity: number;
@@ -32,7 +33,7 @@ export default function ShoppingCartProvider({
   children,
 }: ShoppingCartProviderProps) {
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
-    'loot-market-cart',
+    'gamezon-cart-1042023',
     [],
   );
   const [isOpen, setIsOpen] = useState(false);
@@ -42,11 +43,11 @@ export default function ShoppingCartProvider({
 
   const totalQuantity = cartItems.reduce((s, i) => s + i.quantity, 0);
 
-  function getItemQuantity(id: number) {
+  function getItemQuantity(id: string) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
   }
 
-  function increaseQuantity(id: number) {
+  function increaseQuantity(id: string) {
     setCartItems((current) => {
       if (current.find((item) => item.id === id)) {
         return current.map((item) => {
@@ -60,9 +61,10 @@ export default function ShoppingCartProvider({
         return [...current, { id, quantity: 1 }];
       }
     });
+    toast.success('Product added to cart');
   }
 
-  function decreaseQuantity(id: number) {
+  function decreaseQuantity(id: string) {
     setCartItems((current) => {
       if (current.find((item) => item.id === id)?.quantity === 1) {
         return current.filter((item) => item.id !== id);
@@ -76,10 +78,12 @@ export default function ShoppingCartProvider({
         });
       }
     });
+    toast.success('Product removed from cart');
   }
 
-  function removeFromCart(id: number) {
+  function removeFromCart(id: string) {
     setCartItems((current) => current.filter((item) => item.id !== id));
+    toast.success('Product removed from cart');
   }
 
   return (

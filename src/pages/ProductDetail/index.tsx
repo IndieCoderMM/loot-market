@@ -2,9 +2,9 @@ import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import { formatCurrency } from '../../utils/formatCurrency';
 import { useParams } from 'react-router-dom';
-import { useShoppingCart } from '../../context/ShoppingCartContext';
 import { urlFor } from '../../lib/sanity.client';
 import Rating from './Rating';
+import { useShoppingCart } from '../../context/ShoppingCartContext';
 import { useDataContext } from '../../context/DataContext';
 import ProductCard from '../../components/ProductCard';
 import React, { useState } from 'react';
@@ -14,7 +14,6 @@ const ProductDetail = () => {
   const { products } = useDataContext();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const id = 1;
   const {
     getItemQuantity,
     increaseQuantity,
@@ -22,25 +21,22 @@ const ProductDetail = () => {
     removeFromCart,
   } = useShoppingCart();
 
-  const quantity = getItemQuantity(id);
-
   const product = products.find((p) => p.slug === slug);
+  const quantity = getItemQuantity(product?.id || '');
 
   return (
     <>
       <Container className="my-4">
         <Row className="justify-content-center">
-          <Col lg={6} className="p-1">
+          <Col lg={6} className="p-1 d-flex flex-column align-items-center ">
             {product?.images ? (
-              <div className="w-100">
-                <Image
-                  src={urlFor(product?.images[selectedIndex]).url()}
-                  alt={product?.name}
-                  width={500}
-                  height={500}
-                  className="product-detail-image"
-                />
-              </div>
+              <Image
+                src={urlFor(product?.images[selectedIndex]).url()}
+                alt={product?.name}
+                width={500}
+                height={500}
+                className="product-detail-image"
+              />
             ) : null}
             <div className="d-flex flex-wrap">
               {product?.images?.map((image, index) => (
@@ -51,6 +47,7 @@ const ProductDetail = () => {
                   }`}
                   onMouseEnter={() => setSelectedIndex(index)}
                   onClick={() => setSelectedIndex(index)}
+                  role="button"
                 >
                   <img
                     src={urlFor(image).url()}
@@ -90,7 +87,7 @@ const ProductDetail = () => {
                 <p className="text-secondary fs-4 fw-bold p-0 m-0">Quantity:</p>
                 <div className="d-flex justify-content-center gap-1 bg-light rounded fs-4">
                   <Button
-                    onClick={() => decreaseQuantity(id)}
+                    onClick={() => decreaseQuantity(product?.id || '')}
                     variant="outline-dark"
                     className="rounded border-0"
                   >
@@ -100,7 +97,7 @@ const ProductDetail = () => {
                     <span className="fw-bold">{quantity}</span> in cart
                   </div>
                   <Button
-                    onClick={() => increaseQuantity(id)}
+                    onClick={() => increaseQuantity(product?.id || '')}
                     variant="outline-dark"
                     className="rounded border-0"
                   >
@@ -116,7 +113,7 @@ const ProductDetail = () => {
                   <Button
                     size="lg"
                     variant="outline-dark"
-                    onClick={() => increaseQuantity(id)}
+                    onClick={() => increaseQuantity(product?.id || '')}
                   >
                     Add To Cart
                   </Button>
@@ -124,7 +121,7 @@ const ProductDetail = () => {
                   <Button
                     size="lg"
                     variant="outline-dark"
-                    onClick={() => removeFromCart(id)}
+                    onClick={() => removeFromCart(product?.id || '')}
                   >
                     Remove
                   </Button>
@@ -134,7 +131,7 @@ const ProductDetail = () => {
           </Col>
         </Row>
       </Container>
-      {/* TODO: Implement product carousel */}
+
       <div className="my-2 my-sm-5">
         <h2 className="text-center fw-bold fs-2">You May Also Like</h2>
         <section className="products-carousel">

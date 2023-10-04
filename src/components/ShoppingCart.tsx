@@ -3,8 +3,8 @@ import { useShoppingCart } from '../context/ShoppingCartContext';
 import CartItem from './CartItem';
 import { formatCurrency } from '../utils/formatCurrency';
 import { TiShoppingCart } from 'react-icons/ti';
-import productData from '../data/products.json';
 import Summary from './Summary';
+import { useDataContext } from '../context/DataContext';
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -12,11 +12,13 @@ type ShoppingCartProps = {
 
 export default function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { cartItems, closeCart } = useShoppingCart();
-  const products = productData['products'];
+  const { products } = useDataContext();
+
   const totalCost = cartItems.reduce((total, cartItem) => {
-    const item = products.find((i) => i.id === cartItem.id);
+    const item = products?.find((i) => i.id === cartItem.id);
     return total + (item?.price || 0) * cartItem.quantity;
   }, 0);
+
   const shippingCost = 50;
   const vatCost = totalCost * 0.2;
   const grandTotal = totalCost + vatCost + shippingCost;

@@ -51,8 +51,8 @@ export default function Navbar() {
           <div
             className="rounded-circle bg-danger text-white d-flex justify-content-center align-items-center"
             style={{
-              width: '1rem',
-              height: '1rem',
+              width: '1.4rem',
+              height: '1.4rem',
               position: 'absolute',
               top: 0,
               right: 0,
