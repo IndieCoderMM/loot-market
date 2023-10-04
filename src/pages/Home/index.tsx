@@ -25,7 +25,7 @@ export default function Home() {
     });
   }, []);
   return (
-    <main>
+    <>
       <HeroBanner banner={banners[1]} />
 
       <Services />
@@ -60,6 +60,6 @@ export default function Home() {
       </section>
 
       <Testimonials />
-    </main>
+    </>
   );
 }

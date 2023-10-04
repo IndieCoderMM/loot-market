@@ -1,32 +1,39 @@
-import { Routes, Route } from 'react-router-dom';
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from 'react-router-dom';
 import Home from './pages/Home';
 import Store from './pages/Store';
 import Contact from './pages/Contact';
-import Navbar from './components/Navbar';
-import ShoppingCartProvider from './context/ShoppingCartContext';
-import Footer from './components/Footer';
 import Product from './pages/Product';
 import Category from './pages/Category';
+import Layout from './Layout';
 import { FormspreeProvider } from '@formspree/react';
+import ShoppingCartProvider from './context/ShoppingCartContext';
 
-function App() {
+const Router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />} errorElement={<div>Not found</div>}>
+      <Route index element={<Home />} />
+      <Route path="store" element={<Store />} />
+      <Route path="store/:category" element={<Category />} />
+      <Route path="product/:id" element={<Product />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="*" element={<div>Not found</div>} />
+    </Route>,
+  ),
+);
+
+const App = () => {
   return (
     <FormspreeProvider project="2206426162844924944">
       <ShoppingCartProvider>
-        <Navbar />
-        <>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/store/:category" element={<Category />} />
-            <Route path="/product/:id" element={<Product />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </>
-        <Footer />
+        <RouterProvider router={Router} />
       </ShoppingCartProvider>
     </FormspreeProvider>
   );
-}
+};
 
 export default App;

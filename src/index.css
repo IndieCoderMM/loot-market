@@ -185,8 +185,7 @@ h6 {
 }
 
 .service__text {
-  font-weight: 500;
-  opacity: 0.9;
+  opacity: 0.8;
   font-size: 1rem;
   line-height: 1.5;
 }

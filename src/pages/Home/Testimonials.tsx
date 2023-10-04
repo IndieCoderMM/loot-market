@@ -40,7 +40,7 @@ const Testimonial = ({ name, role, text, imageUrl }: TestimonialProps) => {
         className="rounded-circle mt-auto"
       />
       <div className="">
-        <h4>{name}</h4>
+        <h5>{name}</h5>
         <p className="opacity-75 fs-6">{role}</p>
         <div className="d-flex gap-1 justify-content-center">
           {Array.from({ length: 5 }).map((_, index) => (

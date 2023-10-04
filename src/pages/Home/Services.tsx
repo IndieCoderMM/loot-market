@@ -38,7 +38,7 @@ const Services = () => {
       {services.map((service) => (
         <article
           key={service.id}
-          className="service d-flex flex-column flex-lg-row gap-1 w-100 justify-content-center gap-sm-3 p-1 align-items-center align-items-lg-start"
+          className="service d-flex flex-1 flex-column flex-lg-row gap-1 w-100 justify-content-center gap-sm-3 p-1 align-items-center align-items-lg-start"
         >
           <div className="service__icon">{service.icon}</div>
           <div className="text-center text-lg-start">
