@@ -18,7 +18,7 @@ function StoreItem({ product, isAlternate }: StoreItemProps) {
   const { id, name, info, imgUrl, price } = product;
   return (
     <Container className="p-1 p-md-5">
-      <Card className="p-2">
+      <div className="p-2">
         <Row>
           <Col md={6} className={isAlternate ? 'order-md-2' : ''}>
             <Image src={imgUrl} alt={name} fluid />
@@ -38,7 +38,7 @@ function StoreItem({ product, isAlternate }: StoreItemProps) {
             </Card.Body>
           </Col>
         </Row>
-      </Card>
+      </div>
     </Container>
   );
 }
