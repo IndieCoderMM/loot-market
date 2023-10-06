@@ -5,10 +5,14 @@ import CartItem from './CartItem';
 import { formatCurrency } from '../utils/formatCurrency';
 import Summary from './Summary';
 import { useDataContext } from '../context/DataContext';
+import getStripe from '../lib/getStripe';
+import toast from 'react-hot-toast';
 
 type ShoppingCartProps = {
   isOpen: boolean;
 };
+
+const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL || 'http://127.0.0.1:5173';
 
 export default function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { cartItems, closeCart } = useShoppingCart();
@@ -22,6 +26,39 @@ export default function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const shippingCost = 50;
   const vatCost = totalCost * 0.2;
   const grandTotal = totalCost + vatCost + shippingCost;
+
+  const productsInCart = cartItems.map((item) => {
+    const product = products?.find((i) => i.id === item.id);
+
+    return {
+      // price_data: {
+      //   currency: 'usd',
+      //   product_data: {
+      //     name: product?.name,
+      //   },
+      //   unit_amount: (product?.price || 0) * 100,
+      // },
+      price: product?.priceId,
+      quantity: item.quantity,
+    };
+  });
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+    if (!stripe) return;
+    toast.loading('Redirecting to Checkout...');
+
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: productsInCart,
+      submitType: 'pay',
+      mode: 'payment',
+      successUrl: `${DOMAIN_URL}/?success=true`,
+      cancelUrl: `${DOMAIN_URL}?canceled=true`,
+      customerEmail: 'customer@email.com',
+    });
+    console.warn(error.message);
+  };
+
   return (
     <Offcanvas show={isOpen} placement="end" onHide={closeCart}>
       <Offcanvas.Header closeButton>
@@ -66,6 +103,7 @@ export default function ShoppingCart({ isOpen }: ShoppingCartProps) {
                 variant="warning"
                 size="lg"
                 className="text-dark fs-5 fw-bold"
+                onClick={handleCheckout}
               >
                 Pay With Stripe
               </Button>
