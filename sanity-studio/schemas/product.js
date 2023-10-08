@@ -23,6 +23,11 @@ export default {
       type: 'number',
     },
     {
+      name: 'priceId',
+      title: 'Price ID',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
