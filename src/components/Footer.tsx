@@ -12,15 +12,15 @@ export default function Footer() {
       <Container>
         <Navbar variant="dark d-flex flex-column flex-md-row align-items-start align-items-md-center">
           <Navbar.Brand className="fw-bold fs-2">gamezon</Navbar.Brand>
-          <Nav className="ms-md-auto d-flex flex-wrap">
-            <Nav.Link to="/" as={NavLink} className="text-uppercase ">
+          <Nav className="ms-md-auto d-flex flex-wrap gap-1">
+            <Nav.Link to="/" as={NavLink}>
               Home
             </Nav.Link>
-            <Nav.Link to="/store" as={NavLink} className="text-uppercase ">
-              Store
+            <Nav.Link to="/store" as={NavLink}>
+              Shop Now
             </Nav.Link>
-            <Nav.Link to="/about" as={NavLink} className="text-uppercase ">
-              About
+            <Nav.Link to="/contact" as={NavLink}>
+              Contact Us
             </Nav.Link>
           </Nav>
         </Navbar>

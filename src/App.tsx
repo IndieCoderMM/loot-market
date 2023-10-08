@@ -12,6 +12,7 @@ import Layout from './Layout';
 import { FormspreeProvider } from '@formspree/react';
 import ShoppingCartProvider from './context/ShoppingCartContext';
 import DataProvider from './context/DataContext';
+import NotFound from './pages/NotFound';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,7 +21,7 @@ const Router = createBrowserRouter(
       <Route path="store" element={<Store />} />
       <Route path="product/:slug" element={<ProductDetail />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="*" element={<div>Not found</div>} />
+      <Route path="*" element={<NotFound />} />
     </Route>,
   ),
 );
