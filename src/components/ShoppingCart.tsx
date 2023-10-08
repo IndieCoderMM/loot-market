@@ -7,6 +7,7 @@ import Summary from './Summary';
 import { useDataContext } from '../context/DataContext';
 import getStripe from '../lib/getStripe';
 import toast from 'react-hot-toast';
+import { useEffect } from 'react';
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -15,8 +16,19 @@ type ShoppingCartProps = {
 const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL || 'http://127.0.0.1:5173';
 
 export default function ShoppingCart({ isOpen }: ShoppingCartProps) {
-  const { cartItems, closeCart } = useShoppingCart();
+  const { cartItems, resetCart, closeCart } = useShoppingCart();
   const { products } = useDataContext();
+
+  useEffect(() => {
+    const paymentStatus = new URLSearchParams(window.location.search);
+    if (paymentStatus.get('success')) {
+      toast.success('Payment was successful!');
+      resetCart();
+    }
+    if (paymentStatus.get('canceled')) {
+      toast.error('Payment was canceled!');
+    }
+  }, []);
 
   const totalCost = cartItems.reduce((total, cartItem) => {
     const item = products?.find((i) => i.id === cartItem.id);
