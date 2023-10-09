@@ -17,6 +17,7 @@ type ShoppingCartContext = {
   increaseQuantity: (id: string) => void;
   decreaseQuantity: (id: string) => void;
   removeFromCart: (id: string) => void;
+  resetCart: () => void;
   openCart: () => void;
   closeCart: () => void;
   totalQuantity: number;
@@ -86,6 +87,10 @@ export default function ShoppingCartProvider({
     toast.success('Product removed from cart');
   }
 
+  function resetCart() {
+    setCartItems([]);
+  }
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -93,6 +98,7 @@ export default function ShoppingCartProvider({
         increaseQuantity,
         decreaseQuantity,
         removeFromCart,
+        resetCart,
         cartItems,
         totalQuantity,
         openCart,

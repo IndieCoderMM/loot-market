@@ -32,7 +32,10 @@ const ProductDetail = () => {
     <>
       <Container className="my-4">
         <Row className="justify-content-center">
-          <Col lg={6} className="p-1 d-flex flex-column align-items-center ">
+          <Col
+            lg={6}
+            className="p-1 d-flex flex-column gap-3 align-items-center "
+          >
             {product?.images ? (
               <Image
                 src={urlFor(product?.images[selectedIndex]).url()}
@@ -87,7 +90,7 @@ const ProductDetail = () => {
               </p>
             </div>
             <div>
-              <div className="d-flex gap-1 flex-md-row flex-column w-100 align-items-center">
+              <div className="d-flex gap-1 w-100 align-items-center">
                 <p className="text-secondary fs-4 fw-bold p-0 m-0">Quantity:</p>
                 <div className="d-flex justify-content-center gap-1 bg-light rounded fs-4">
                   <Button
@@ -95,6 +98,7 @@ const ProductDetail = () => {
                     variant="outline-dark"
                     className="rounded border-0"
                   >
+                    <span className="visually-hidden">Decrease quantity</span>
                     <FaMinus />
                   </Button>
                   <div className="px-3 py-2">
@@ -105,6 +109,7 @@ const ProductDetail = () => {
                     variant="outline-dark"
                     className="rounded border-0"
                   >
+                    <span className="visually-hidden">Increase quantity</span>
                     <FaPlus />
                   </Button>
                 </div>

@@ -69,6 +69,16 @@ p {
   transform: scale(1.2, 1.2) translateY(-2px);
 }
 
+.banner-text-box h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.banner-text-box p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 /* Components ----------------------------------------------------------------- */
 
 /* Hero Section */
@@ -341,6 +351,22 @@ p {
   .product-detail-image {
     width: 500px;
     height: 500px;
+  }
+
+  .banner-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .banner-text-box h1 {
+    font-size: 2.8rem;
+  }
+
+  .banner-text-box p {
+    font-size: 1.2rem;
   }
 
   .hotsale-banner__right {

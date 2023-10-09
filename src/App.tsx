@@ -8,21 +8,20 @@ import Home from './pages/Home';
 import Store from './pages/Store';
 import Contact from './pages/Contact';
 import ProductDetail from './pages/ProductDetail';
-import Category from './pages/Category';
 import Layout from './Layout';
 import { FormspreeProvider } from '@formspree/react';
 import ShoppingCartProvider from './context/ShoppingCartContext';
 import DataProvider from './context/DataContext';
+import NotFound from './pages/NotFound';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />} errorElement={<div>Not found</div>}>
       <Route index element={<Home />} />
       <Route path="store" element={<Store />} />
-      <Route path="store/:category" element={<Category />} />
       <Route path="product/:slug" element={<ProductDetail />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="*" element={<div>Not found</div>} />
+      <Route path="*" element={<NotFound />} />
     </Route>,
   ),
 );

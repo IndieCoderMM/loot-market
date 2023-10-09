@@ -18,6 +18,7 @@ export interface Product {
   id: string;
   name: string;
   price: number;
+  priceId: string;
   slug: string;
   description: string;
   images: string[];
@@ -29,6 +30,7 @@ export const getProducts = async (): Promise<Product[]> => {
       "id": _id,
       name,
       price,
+      priceId,
       "slug": slug.current,
       description,
       "images": image[]
@@ -60,6 +62,7 @@ export const getProductBySlug = async (slug: string): Promise<Product> => {
       "id": _id,
       name,
       price,
+      priceId,
       "slug": slug.current,
       description,
       "images": image[]
